@@ -1,4 +1,4 @@
-# Tiny-HPC-RLHF: 在单个消费级GPU上实现全栈 RLHF
+# EdgeRLHF: 在单个消费级GPU上实现全栈 RLHF
 
 ```
   _   _ _   _ ___  ___   _   __  __ ___ ___ ___ 
@@ -66,8 +66,8 @@ graph TD;
 
 克隆本仓库并安装依赖。
 ```bash
-git clone https://github.com/your-username/Tiny-HPC-RLHF.git
-cd Tiny-HPC-RLHF
+git clone https://github.com/PrescottClub/Tiny-HPC-RLHF-.git
+cd EdgeRLHF
 ```
 现在，启动 Jupyter Lab 并运行 `00_Setup.ipynb`。它将自动安装所有必需的库 (`torch`, `transformers`, `trl`, `peft`, `bitsandbytes`) 并创建必要的目录。
 
@@ -83,7 +83,7 @@ cd Tiny-HPC-RLHF
 ## 📁 项目结构
 
 ```
-Tiny-HPC-RLHF/
+EdgeRLHF/
 ├── 00_Setup.ipynb
 ├── 01_Data_Preparation.ipynb
 ├── 02_SFT_Finetuning.ipynb
