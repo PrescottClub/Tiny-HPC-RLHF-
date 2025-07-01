@@ -1,0 +1,6 @@
+{
+  "bf16": {
+    "status": "failed",
+    "error": "PPOConfig.__init__() got an unexpected keyword argument 'ppo_epochs'"
+  }
+}
