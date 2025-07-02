@@ -108,6 +108,8 @@ Execute the notebooks in sequence for the complete RLHF experience:
 | [`03_Reward_Modeling.ipynb`](03_Reward_Modeling.ipynb) | Train reward models at multiple precisions | 45 min |
 | [`04_PPO_Alignment.ipynb`](04_PPO_Alignment.ipynb) | PPO alignment training and evaluation | 60 min |
 
+> 📚 **详细文档**: 查看 [`docs/`](docs/) 文件夹获取完整的项目文档，包括研究报告、技术分析和项目总结。
+
 ## 📊 Performance Benchmarks
 
 ### 🎯 Model Quality Metrics
@@ -151,7 +153,24 @@ EdgeRLHF/
 │       └── int4/                   # INT4 quantized
 ├── 📈 results/
 │   └── ppo_experiment_results.json # Training metrics and logs
-├── 📄 PROJECT_STATUS.md            # Current project status
+├── 📚 docs/                        # Project documentation
+│   ├── README.md                   # Documentation index
+│   ├── EdgeRLHF_Research_Report.md # Complete research report
+│   ├── PROJECT_COMPLETION_SUMMARY.md # Project completion summary
+│   ├── PROJECT_STATUS.md           # Current project status
+│   ├── PROJECT_STRUCTURE_PERFECTION.md # Structure optimization
+│   ├── training_analysis_report.md # Training analysis
+│   └── research_guidelines.md      # Research methodology
+├── 🛠️ scripts/                     # Utility scripts
+│   ├── setup_environment.py        # Environment setup
+│   ├── validate_setup.py           # Setup validation
+│   ├── start_jupyter.py            # Jupyter launcher
+│   └── cleanup.py                  # Cleanup utilities
+├── ⚙️ config.py                    # Project configuration
+├── 🔧 optimized_ppo_config.py      # PPO optimizations
+├── 📋 requirements.txt             # Python dependencies
+├── 🐍 environment.yml              # Conda environment
+├── 🔨 Makefile                     # Build automation
 └── 📖 README.md                    # This file
 ```
 
