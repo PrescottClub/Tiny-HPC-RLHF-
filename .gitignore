@@ -1,0 +1,236 @@
+# EdgeRLHF Project .gitignore
+
+# =============================================================================
+# Python Environment
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =============================================================================
+# Virtual Environments
+# =============================================================================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+conda-meta/
+
+# =============================================================================
+# Jupyter Notebook
+# =============================================================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb~
+
+# =============================================================================
+# PyTorch & Deep Learning
+# =============================================================================
+# Model files (large binary files)
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.model
+*.pkl
+*.pickle
+
+# Except small config files
+!*/adapter_config.json
+!*/tokenizer_config.json
+!*/special_tokens_map.json
+!*/tokenizer.json
+!*/vocab.json
+!*/merges.txt
+
+# CUDA cache
+.nv/
+.torch/
+
+# =============================================================================
+# Hugging Face Cache
+# =============================================================================
+.cache/
+.huggingface/
+transformers_cache/
+hf_cache/
+
+# =============================================================================
+# TensorBoard & Logging
+# =============================================================================
+runs/
+logs/
+lightning_logs/
+mlruns/
+wandb/
+.neptune/
+
+# =============================================================================
+# Data Files (Large Datasets)
+# =============================================================================
+# Keep small sample datasets but ignore large ones
+data/raw/
+data/processed/
+data/external/
+data/interim/
+*.hdf5
+*.h5
+*.feather
+*.parquet
+
+# Keep project-specific small data
+!data/train_prefs.jsonl
+!data/test_prefs.jsonl
+
+# =============================================================================
+# Model Outputs & Checkpoints
+# =============================================================================
+# Large model files in models directory
+models/**/*.bin
+models/**/*.safetensors
+models/**/*.pt
+models/**/*.pth
+models/**/pytorch_model.bin
+models/**/pytorch_model.safetensors
+models/**/model.safetensors
+
+# But keep adapter files and configs (they're small)
+!models/**/adapter_config.json
+!models/**/adapter_model.safetensors
+
+# Checkpoint directories with large files
+models/**/checkpoint-*/pytorch_model.bin
+models/**/checkpoint-*/model.safetensors
+models/**/checkpoint-*/optimizer.pt
+models/**/checkpoint-*/scheduler.pt
+models/**/checkpoint-*/rng_state.pth
+models/**/checkpoint-*/training_args.bin
+
+# =============================================================================
+# Experiment Results & Outputs
+# =============================================================================
+outputs/
+experiments/
+temp/
+tmp/
+scratch/
+
+# Keep important result summaries
+!results/*.json
+!results/*.csv
+!results/*.md
+
+# =============================================================================
+# IDE & Editor Files
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =============================================================================
+# OS Files
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# =============================================================================
+# Windows
+# =============================================================================
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# =============================================================================
+# NVIDIA & CUDA
+# =============================================================================
+*.i
+*.ii
+*.gpu
+*.ptx
+*.cubin
+*.fatbin
+
+# =============================================================================
+# Configuration & Secrets
+# =============================================================================
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config.ini
+secrets.json
+api_keys.txt
+
+# =============================================================================
+# Temporary & Cache Files
+# =============================================================================
+*.tmp
+*.temp
+*.cache
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =============================================================================
+# Project Specific
+# =============================================================================
+# Ignore large downloaded models from HuggingFace
+base_models/
+pretrained_models/
+downloaded_models/
+
+# Temporary experiment files
+exp_*.json
+test_*.py
+debug_*.py
+quick_*.py
+
+# Large result files
+*.csv.gz
+*.jsonl.gz
+large_results/
+
+# =============================================================================
+# Git LFS (for reference, uncomment if using Git LFS)
+# =============================================================================
+# *.bin filter=lfs diff=lfs merge=lfs -text
+# *.safetensors filter=lfs diff=lfs merge=lfs -text
+# *.model filter=lfs diff=lfs merge=lfs -text 

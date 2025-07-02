@@ -1,0 +1,88 @@
+{
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "description": "Knowledge graph for experiment tracking and research notes",
+      "enabled": true,
+      "priority": "high",
+      "useCase": "Store experiment results, model configurations, and research insights"
+    },
+    "calculator": {
+      "command": "npx", 
+      "args": ["-y", "@modelcontextprotocol/server-calculator"],
+      "description": "Mathematical calculations for metrics and statistics",
+      "enabled": true,
+      "priority": "high",
+      "useCase": "Calculate training metrics, KL divergence, reward scores, memory usage"
+    },
+    "quickchart": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-quickchart"],  
+      "description": "Generate charts and visualizations for research results",
+      "enabled": true,
+      "priority": "high",
+      "useCase": "Plot training curves, compare model performance, visualize metrics"
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "description": "Search for latest RLHF research and papers",
+      "enabled": true,
+      "priority": "medium", 
+      "useCase": "Find recent papers, techniques, and related research"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "description": "Structured problem-solving for complex research decisions",
+      "enabled": true,
+      "priority": "medium",
+      "useCase": "Debug training issues, optimize hyperparameters, plan experiments"
+    }
+  },
+  "globalSettings": {
+    "autoConnect": true,
+    "timeout": 30000,
+    "retryAttempts": 3
+  },
+  "projectSpecific": {
+    "EdgeRLHF": {
+      "description": "RLHF research on consumer GPUs",
+      "activeMcps": [
+        "memory",
+        "calculator", 
+        "quickchart",
+        "brave-search",
+        "sequential-thinking"
+      ],
+      "configurations": {
+        "memory": {
+          "contextSize": "large",
+          "persistentStorage": true,
+          "categories": [
+            "experiments",
+            "model_configs", 
+            "training_results",
+            "paper_notes",
+            "optimization_tricks"
+          ]
+        },
+        "calculator": {
+          "precision": "high",
+          "complexMath": true
+        },
+        "quickchart": {
+          "defaultTheme": "research",
+          "exportFormats": ["png", "svg"],
+          "chartTypes": [
+            "line", 
+            "bar",
+            "scatter",
+            "box"
+          ]
+        }
+      }
+    }
+  }
+} 
