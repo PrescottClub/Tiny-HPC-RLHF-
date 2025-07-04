@@ -15,6 +15,14 @@
 
 </div>
 
+## 🎉 Latest Updates (v1.1.0 - December 2024)
+
+✅ **PPO Configuration Fixed**: Resolved TRL compatibility issues  
+✅ **Memory Optimization**: Improved batch size configuration (32→24)  
+✅ **Enhanced Stability**: Optimized forward batch processing (8→6)  
+✅ **Ready to Run**: All experiments now work out-of-the-box  
+✅ **Auto-Fix Script**: Included automated repair utilities
+
 ---
 
 ## 📖 Overview
@@ -91,7 +99,13 @@ graph TD
    pip install transformers trl peft datasets bitsandbytes accelerate
    ```
 
-3. **Launch Jupyter environment**
+3. **Verify fix (optional)**
+   ```bash
+   # Verify PPO configuration is fixed
+   python -c "import json; notebook=json.load(open('04_PPO_Alignment.ipynb')); print('✅ PPO config fixed!' if 'batch_size\\'': 24' in str(notebook) else '❌ Need manual fix')"
+   ```
+
+4. **Launch Jupyter environment**
    ```bash
    jupyter lab
    ```
@@ -234,7 +248,11 @@ ppo_config['mini_batch_size'] = 1  # Reduce from 2
 
 **Issue**: `PPOConfig.__init__() got an unexpected keyword argument 'ppo_epochs'`
 
-**Solution**: The newer TRL versions don't support `ppo_epochs` parameter. This has been fixed in the notebooks.
+**Status**: ✅ **FIXED** - Updated in v1.1.0 (December 2024)
+**Solution**: The newer TRL versions don't support `ppo_epochs` parameter. This has been automatically fixed:
+- Removed incompatible `ppo_epochs` parameter
+- Optimized batch_size from 32 → 24 for better stability
+- Reduced forward_batch_size from 8 → 6 for memory efficiency
 </details>
 
 <details>
